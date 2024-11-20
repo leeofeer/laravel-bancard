@@ -5,7 +5,7 @@
 Install via composer
 
 ```bash
-composer require deviam/laravel-bancard
+composer require bancardgateway/laravel-bancard
 ```
 Publish config and migrations
 
