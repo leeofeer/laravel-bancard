@@ -25,7 +25,7 @@ class CreateBancardSingleBuysTable extends Migration
             $table->timestamps();
         });
 
-        DB::statement('ALTER Table bancard_single_buys add shop_process_id INTEGER NOT NULL UNIQUE AUTO_INCREMENT;');
+        DB::statement('ALTER TABLE bancard_single_buys ADD shop_process_id SERIAL NOT NULL UNIQUE;');
     }
 
     /**
