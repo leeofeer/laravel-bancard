@@ -1,9 +1,9 @@
 <?php
 
-namespace Deviam\Bancard\Petitions;
+namespace Bancardgateway\Bancard\Petitions;
 
-use Deviam\Bancard\Bancard;
-use Deviam\Bancard\Models\{SingleBuy as SingleBuyModel, Confirmation as ConfirmationModel};
+use Bancardgateway\Bancard\Bancard;
+use Bancardgateway\Bancard\Models\{SingleBuy as SingleBuyModel, Confirmation as ConfirmationModel};
 
 class TokenCharge extends Petition
 {

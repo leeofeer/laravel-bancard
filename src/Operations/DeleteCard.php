@@ -1,9 +1,9 @@
 <?php 
 
-namespace Deviam\Bancard\Operations;
+namespace Bancardgateway\Bancard\Operations;
 
 use Illuminate\Http\Client\Response;
-use Deviam\Bancard\Petitions\{Petition, DeleteCard as DeleteCardPetition};
+use Bancardgateway\Bancard\Petitions\{Petition, DeleteCard as DeleteCardPetition};
 
 class DeleteCard extends Operation
 {

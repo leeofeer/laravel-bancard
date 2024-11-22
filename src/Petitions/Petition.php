@@ -1,6 +1,6 @@
 <?php 
 
-namespace Deviam\Bancard\Petitions;
+namespace Bancardgateway\Bancard\Petitions;
 
 abstract class Petition
 {

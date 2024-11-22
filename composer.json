@@ -22,13 +22,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Deviam\\Bancard\\": "src/"
+            "Bancardgateway\\Bancard\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Deviam\\Bancard\\BancardServiceProvider"
+                "Bancardgateway\\Bancard\\BancardServiceProvider"
             ]
         }
     }

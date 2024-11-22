@@ -1,9 +1,9 @@
 <?php
 
-namespace Deviam\Bancard\Petitions;
+namespace Bancardgateway\Bancard\Petitions;
 
-use Deviam\Bancard\Bancard;
-use Deviam\Bancard\Models\Rollback as RollbackModel;
+use Bancardgateway\Bancard\Bancard;
+use Bancardgateway\Bancard\Models\Rollback as RollbackModel;
 
 class Rollback extends Petition
 {

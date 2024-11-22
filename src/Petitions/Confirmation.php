@@ -1,9 +1,9 @@
 <?php
 
-namespace Deviam\Bancard\Petitions;
+namespace Bancardgateway\Bancard\Petitions;
 
-use Deviam\Bancard\Bancard;
-use Deviam\Bancard\Models\Confirmation as ConfirmationModel;
+use Bancardgateway\Bancard\Bancard;
+use Bancardgateway\Bancard\Models\Confirmation as ConfirmationModel;
 
 class Confirmation extends Petition
 {

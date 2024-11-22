@@ -1,6 +1,6 @@
 <?php 
 
-namespace Deviam\Bancard\Models;
+namespace Bancardgateway\Bancard\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;

@@ -1,10 +1,10 @@
 <?php 
 
-namespace Deviam\Bancard\Operations;
+namespace Bancardgateway\Bancard\Operations;
 
-use Deviam\Bancard\Bancard;
+use Bancardgateway\Bancard\Bancard;
 use Illuminate\Support\Facades\Http;
-use Deviam\Bancard\Petitions\Petition;
+use Bancardgateway\Bancard\Petitions\Petition;
 use Illuminate\Http\Client\{Response, RequestException};
 
 abstract class Operation

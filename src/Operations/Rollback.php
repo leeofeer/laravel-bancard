@@ -1,9 +1,9 @@
 <?php
 
-namespace Deviam\Bancard\Operations;
+namespace Bancardgateway\Bancard\Operations;
 
 use Illuminate\Http\Client\Response;
-use Deviam\Bancard\Petitions\{Petition, Rollback as RollbackPetition};
+use Bancardgateway\Bancard\Petitions\{Petition, Rollback as RollbackPetition};
 
 class Rollback extends Operation
 {

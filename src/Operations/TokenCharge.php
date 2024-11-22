@@ -1,9 +1,9 @@
 <?php 
 
-namespace Deviam\Bancard\Operations;
+namespace Bancardgateway\Bancard\Operations;
 
 use Illuminate\Http\Client\Response;
-use Deviam\Bancard\Petitions\{Petition, TokenCharge as TokenCargePetition};
+use Bancardgateway\Bancard\Petitions\{Petition, TokenCharge as TokenCargePetition};
 
 class TokenCharge extends Operation
 {

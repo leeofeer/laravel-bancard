@@ -1,9 +1,9 @@
 <?php 
 
-namespace Deviam\Bancard\Operations;
+namespace Bancardgateway\Bancard\Operations;
 
 use Illuminate\Http\Client\Response;
-use Deviam\Bancard\Petitions\{Petition, ListCards as ListCardsPetition};
+use Bancardgateway\Bancard\Petitions\{Petition, ListCards as ListCardsPetition};
 
 class ListCards extends Operation
 {

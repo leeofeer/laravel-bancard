@@ -1,8 +1,8 @@
 <?php 
 
-namespace Deviam\Bancard;
+namespace Bancardgateway\Bancard;
 
-use Deviam\Bancard\Operations\{
+use Bancardgateway\Bancard\Operations\{
     SingleBuy, 
     NewCard, 
     ListCards, 

@@ -1,6 +1,6 @@
 <?php 
 
-namespace Deviam\Bancard;
+namespace Bancardgateway\Bancard;
 
 use Illuminate\Support\ServiceProvider;
 

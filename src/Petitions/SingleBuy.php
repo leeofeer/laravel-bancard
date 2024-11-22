@@ -1,9 +1,9 @@
 <?php
 
-namespace Deviam\Bancard\Petitions;
+namespace Bancardgateway\Bancard\Petitions;
 
-use Deviam\Bancard\Bancard;
-use Deviam\Bancard\Models\SingleBuy as SingleBuyModel;
+use Bancardgateway\Bancard\Bancard;
+use Bancardgateway\Bancard\Models\SingleBuy as SingleBuyModel;
 
 class SingleBuy extends Petition
 {

@@ -1,9 +1,9 @@
 <?php 
 
-namespace Deviam\Bancard\Operations;
+namespace Bancardgateway\Bancard\Operations;
 
 use Illuminate\Http\Client\Response;
-use Deviam\Bancard\Petitions\{Petition, SingleBuy as SingleBuyPetition};
+use Bancardgateway\Bancard\Petitions\{Petition, SingleBuy as SingleBuyPetition};
 
 class SingleBuy extends Operation
 {
