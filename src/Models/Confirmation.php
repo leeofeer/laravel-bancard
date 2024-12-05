@@ -14,18 +14,21 @@ class Confirmation extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'shop_process_id', 
-        'response', 
-        'response_details', 
-        'authorization_number', 
-        'ticket_number', 
-        'response_code', 
-        'response_description', 
-        'extended_response_description', 
-        'card_source', 
-        'customer_ip', 
-        'card_country', 
-        'version', 
+        'token',
+        'shop_process_id',
+        'response',
+        'response_details',
+        'amount',
+        'currency',
+        'authorization_number',
+        'ticket_number',
+        'response_code',
+        'response_description',
+        'extended_response_description',
+        'card_source',
+        'customer_ip',
+        'card_country',
+        'version',
         'risk_index'
     ];
 
