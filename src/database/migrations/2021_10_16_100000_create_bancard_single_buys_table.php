@@ -17,8 +17,8 @@ class CreateBancardSingleBuysTable extends Migration
             $table->uuid('id')->primary();
             $table->decimal('amount', 15, 2)->nullable();
             $table->string('currency', 3)->nullable();
-            $table->string('additional_data', 100)->nullable();
-            $table->string('description', 20)->nullable();
+            $table->string('additional_data', 100)->default('')->nullable(false);
+            $table->string('description', 255)->nullable();
             $table->string('status', 20)->nullable();
             $table->string('process_id', 20)->nullable();
             $table->boolean('zimple')->default(false);
