@@ -13,9 +13,10 @@ class TokenCharge extends Petition
     public function __construct(string $description, float $amount, string $aliasToken)
     {
         $payload = SingleBuyModel::create([
-            'description' => $description, 
-            'amount' => $amount, 
-            'currency' => 'PYG'
+            'description' => $description,
+            'amount' => $amount,
+            'currency' => 'PYG',
+            'shop_process_id' => $this->generateShopProcessId()
         ]);
         $this->payload = SingleBuyModel::find($payload->id);
         $this->aliasToken = $aliasToken;
@@ -32,15 +33,15 @@ class TokenCharge extends Petition
     public function getOperationPetition(): array
     {
         return [
-            'public_key' => Bancard::publicKey(), 
+            'public_key' => Bancard::publicKey(),
             'operation' => [
-                'token' => $this->token(), 
-                'shop_process_id' => $this->payload->shop_process_id, 
-                'amount' => "{$this->payload->amount}", 
-                'number_of_payments' => 1, 
-                'currency' => $this->payload->currency, 
-                'additional_data' => $this->payload->additional_data, 
-                'description' => $this->payload->description, 
+                'token' => $this->token(),
+                'shop_process_id' => $this->payload->shop_process_id,
+                'amount' => "{$this->payload->amount}",
+                'number_of_payments' => 1,
+                'currency' => $this->payload->currency,
+                'additional_data' => $this->payload->additional_data,
+                'description' => $this->payload->description,
                 'alias_token' => $this->aliasToken
             ]
         ];

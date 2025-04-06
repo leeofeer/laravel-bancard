@@ -12,9 +12,10 @@ class SingleBuy extends Petition
     public function __construct(string $description, float $amount)
     {
         $payload = SingleBuyModel::create([
-            'description' => $description, 
-            'amount' => $amount, 
-            'currency' => 'PYG'
+            'description' => $description,
+            'amount' => $amount,
+            'currency' => 'PYG',
+            'shop_process_id' => $this->generateShopProcessId()
         ]);
         $this->payload = SingleBuyModel::find($payload->id);
     }
@@ -30,15 +31,15 @@ class SingleBuy extends Petition
     public function getOperationPetition(): array
     {
         return [
-            'public_key' => Bancard::publicKey(), 
+            'public_key' => Bancard::publicKey(),
             'operation' => [
-                'token' => $this->token(), 
-                'shop_process_id' => $this->payload->shop_process_id, 
-                'currency' => $this->payload->currency, 
-                'amount' => "{$this->payload->amount}", 
-                'additional_data' => $this->payload->additional_data, 
-                'description' => $this->payload->description, 
-                'return_url' => config('bancard.single_buy_return_url'), 
+                'token' => $this->token(),
+                'shop_process_id' => $this->payload->shop_process_id,
+                'currency' => $this->payload->currency,
+                'amount' => "{$this->payload->amount}",
+                'additional_data' => $this->payload->additional_data,
+                'description' => $this->payload->description,
+                'return_url' => config('bancard.single_buy_return_url'),
                 'cancel_url' => config('bancard.single_buy_cancel_url')
             ]
         ];
