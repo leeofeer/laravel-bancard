@@ -9,13 +9,15 @@ class SingleBuy extends Petition
 {
     private SingleBuyModel $payload;
 
-    public function __construct(string $description, float $amount)
+    public function __construct(string $description, float $amount, ?int $shop_process_id)
     {
+        $shop_process_id = $shop_process_id ?? $this->generateShopProcessId();
+
         $payload = SingleBuyModel::create([
             'description' => $description,
             'amount' => $amount,
             'currency' => 'PYG',
-            'shop_process_id' => $this->generateShopProcessId()
+            'shop_process_id' => $shop_process_id
         ]);
         $this->payload = SingleBuyModel::find($payload->id);
     }

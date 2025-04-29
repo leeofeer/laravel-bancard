@@ -10,13 +10,15 @@ class TokenCharge extends Petition
     private SingleBuyModel $payload;
     private string $aliasToken;
 
-    public function __construct(string $description, float $amount, string $aliasToken)
+    public function __construct(string $description, float $amount, string $aliasToken, ?int $shop_process_id)
     {
+        $shop_process_id = $shop_process_id ?? $this->generateShopProcessId();
+
         $payload = SingleBuyModel::create([
             'description' => $description,
             'amount' => $amount,
             'currency' => 'PYG',
-            'shop_process_id' => $this->generateShopProcessId()
+            'shop_process_id' => $shop_process_id
         ]);
         $this->payload = SingleBuyModel::find($payload->id);
         $this->aliasToken = $aliasToken;

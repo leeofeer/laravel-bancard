@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Bancardgateway\Bancard\Operations;
 
@@ -12,12 +12,14 @@ class TokenCharge extends Operation
     private string $description;
     private float $amount;
     private string $aliasToken;
+    private ?int $shop_process_id;
 
-    public function __construct(string $description, float $amount, string $aliasToken)
+    public function __construct(string $description, float $amount, string $aliasToken, ?int $shop_process_id)
     {
         $this->description = $description;
         $this->amount = $amount;
         $this->aliasToken = $aliasToken;
+        $this->shop_process_id = $shop_process_id;
     }
 
     protected static function getResource(): string
@@ -27,7 +29,7 @@ class TokenCharge extends Operation
 
     protected function getPetition(): Petition
     {
-        return new TokenCargePetition($this->description, $this->amount, $this->aliasToken);
+        return new TokenCargePetition($this->description, $this->amount, $this->aliasToken, $this->shop_process_id);
     }
 
     protected function handleSuccess(Petition $petition, Response $response): void

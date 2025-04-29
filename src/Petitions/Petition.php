@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Bancardgateway\Bancard\Petitions;
 
@@ -15,6 +15,6 @@ abstract class Petition
 
     public function generateShopProcessId(): int
     {
-        return random_int(100000000, 2339476471);
+        return random_int(10000000, 23394764);
     }
 }

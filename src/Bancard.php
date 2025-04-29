@@ -54,9 +54,9 @@ class Bancard
      * @param float $amount Amount in Guaraníes.
      * @return Response
      */
-    public static function singleBuy(string $description, float $amount): Response
+    public static function singleBuy(string $description, float $amount, ?int $shopProcessId): Response
     {
-        $operation = new SingleBuy($description, $amount);
+        $operation = new SingleBuy($description, $amount, $shopProcessId);
         return $operation->makeRequest();
     }
 
@@ -107,9 +107,9 @@ class Bancard
      * @param string $aliasToken
      * @return Response
      */
-    public static function tokenCharge(string $description, float $amount, string $aliasToken): Response
+    public static function tokenCharge(string $description, float $amount, string $aliasToken, ?int $shopProcessId): Response
     {
-        $operation = new TokenCharge($description, $amount, $aliasToken);
+        $operation = new TokenCharge($description, $amount, $aliasToken, $shopProcessId);
         return $operation->makeRequest();
     }
 
