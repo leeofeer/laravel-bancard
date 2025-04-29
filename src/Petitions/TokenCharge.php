@@ -12,7 +12,7 @@ class TokenCharge extends Petition
 
     public function __construct(string $description, float $amount, string $aliasToken, ?int $shop_process_id)
     {
-        $shop_process_id = $shop_process_id ?? $this->generateShopProcessId();
+        $shop_process_id = $shop_process_id ?? self::generateShopProcessId();
 
         $payload = SingleBuyModel::create([
             'description' => $description,

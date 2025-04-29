@@ -13,7 +13,7 @@ abstract class Petition
         //
     }
 
-    public function generateShopProcessId(): int
+    public static function generateShopProcessId(): int
     {
         return random_int(10000000, 23394764);
     }
